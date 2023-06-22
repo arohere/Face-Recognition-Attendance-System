@@ -1,8 +1,5 @@
 import os  # accessing the os functions
 import check_camera
-import Capture_Image
-import Train_Image
-import Recognize
 
 
 # creating the title bar function
@@ -38,18 +35,17 @@ def mainMenu():
                 checkCamera()
                 break
             elif choice == 2:
-                CaptureFaces()
+                # CaptureFaces()
                 break
             elif choice == 3:
-                Trainimages()
+                # Trainimages()
                 break
             elif choice == 4:
-                RecognizeFaces()
+                # RecognizeFaces()
                 break
             elif choice == 5:
                 os.system("py automail.py")
                 break
-                mainMenu()
             elif choice == 6:
                 print("Thank You")
                 break
@@ -70,32 +66,4 @@ def checkCamera():
     mainMenu()
 
 
-# --------------------------------------------------------------
-# calling the take image function form capture image.py file
-
-def CaptureFaces():
-    Capture_Image.takeImages()
-    key = input("Enter any key to return main menu")
-    mainMenu()
-
-
-# -----------------------------------------------------------------
-# calling the train images from train_images.py file
-
-def Trainimages():
-    Train_Image.TrainImages()
-    key = input("Enter any key to return main menu")
-    mainMenu()
-
-
-# --------------------------------------------------------------------
-# calling the recognize_attendance from recognize.py file
-
-def RecognizeFaces():
-    Recognize.recognize_attendence()
-    key = input("Enter any key to return main menu")
-    mainMenu()
-
-
-# ---------------main driver ------------------
 mainMenu()
